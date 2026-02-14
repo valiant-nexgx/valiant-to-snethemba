@@ -10,9 +10,8 @@ primary_region = "jnb"  # Johannesburg - closest to South Africa
   release_command = "/app/bin/migrate"
 
 [env]
-  PHX_HOST = "snethemba.fly.dev"
+  PHX_HOST = "valiant-to-snethemba.fly.dev"
   PHX_SERVER = "true"
-  ECTO_IPV6 = "true"
 
 [http_service]
   internal_port = 4000

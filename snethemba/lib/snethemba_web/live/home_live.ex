@@ -48,7 +48,7 @@ defmodule SnethembaWeb.HomeLive do
               <%!-- Combined glow --%>
               <div class="absolute inset-0 w-full h-full bg-gradient-to-br from-rose-500/20 via-pink-500/15 to-purple-500/20 blur-2xl scale-150 animate-pulse-glow" />
 
-              <%!-- Valiant's photo (left, slightly behind) --%>
+              <%!-- Valiant's photo (left, slightly behind) she the queen --%>
               <div class="relative z-10">
                 <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full p-0.5 bg-gradient-to-br from-purple-400 via-indigo-500 to-blue-500 shadow-xl shadow-purple-500/20">
                   <img

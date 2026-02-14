@@ -1,0 +1,33 @@
+# fly.toml - Fly.io deployment configuration for "Us." app
+# See https://fly.io/docs/reference/configuration/ for options
+
+app = "snethemba"
+primary_region = "jnb"  # Johannesburg - closest to South Africa
+
+[build]
+
+[deploy]
+  release_command = "/app/bin/migrate"
+
+[env]
+  PHX_HOST = "snethemba.fly.dev"
+  PHX_SERVER = "true"
+  ECTO_IPV6 = "true"
+
+[http_service]
+  internal_port = 4000
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+
+  [http_service.concurrency]
+    type = "connections"
+    hard_limit = 1000
+    soft_limit = 1000
+
+[[vm]]
+  memory = "512mb"
+  cpu_kind = "shared"
+  cpus = 1
